@@ -1,0 +1,43 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Senhas</h1>
+        <div class="checkbox-group">
+            <label><input type="checkbox" id="numbersCheckbox"> Somente números</label>
+            <label><input type="checkbox" id="lettersCheckbox"> Somente letras</label>
+            <label><input type="checkbox" id="specialCharsCheckbox"> Caracteres especiais</label>
+        </div>
+        <div class="password-length">
+            <label for="passwordLength">Comprimento da Senha:</label>
+            <input type="range" id="passwordLength" name="passwordLength" min="8" max="20" value="12">
+            <span id="lengthValue">12</span>
+        </div>
+        <button id="generatePassword">Gerar Senha</button>
+        <button id="copyPassword">Copiar Senha</button>
+        <input type="text" id="password" readonly>
+        <div class="password-strength">
+            <label>Força da Senha:</label>
+            <progress id="passwordStrength" max="100" value="0"></progress>
+        </div>
+        <div id="warningMessage" class="warning-message">Por favor, selecione pelo menos uma opção (Somente números, Somente letras ou Ambos).</div>
+        <div class="button-container">
+            <button id="showHistory">Ver Log</button>
+        </div>
+        <div id="passwordHistory" class="password-history">
+            <h3>Histórico de Senhas</h3>
+            <!-- Histórico de senhas geradas será adicionado dinamicamente aqui -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
